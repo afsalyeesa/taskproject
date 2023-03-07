@@ -1,0 +1,9 @@
+{% extends 'store/base.html' %}
+
+{% block title %}Order Confirmation{% endblock %}
+
+{% block content %}
+<h1>Order Confirmed</h1>
+<p>Thank you for your order, {{ order.name }}!</p>
+<p><a href="{% url 'home' %}">Return to home page</a></p>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'store/base.html' %}
+
+{% block title %}Order{% endblock %}
+
+{% block content %}
+<h1>Order Form</h1>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Submit</button>
+</form>
+<script>
+  document.getElementById('id_department').addEventListener('change', function() {
+    this.form.submit();
+  });
+</script>
+{% endblock %}
