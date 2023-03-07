@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Registration Form</h1>
+<form action="form" method="post">
+
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="enter your name"><br>
+    <input type="date" name="DOB" placeholder="enter your DOB"><br>
+    <input type="number" name="Age" placeholder="enter your age"><br>
+    <input type="text" name="gender"  placeholder="enter your gender"><br>
+    <input type="number" name="phoneno" placeholder="enter your phone number"><br>
+    <input type="email" name="email" placeholder="enter your mail id"><br>
+    <input type="text" name="address" placeholder="enter your address"><br>
+        <h4>Courses</h4>
+        <select>
+            <optgroup label="Civil">
+                <option value="departments">design of structure</option>
+                <option value="departments">basic of constructions</option>
+                <option value="departments">plan and elevation</option>
+            </optgroup>
+            <optgroup label="Mechanical">
+                <option value="departments">Thermodynamic</option>
+                <option value="departments">Mechanics</option>
+                <option value="departments">Graphics</option>
+            </optgroup>
+
+            <optgroup label="Computer">
+                <option value="departments">Data analysis</option>
+                <option value="departments">Basic Programming</option>
+                <option value="departments">OOps</option>
+            </optgroup>
+
+            <optgroup label="Electrical">
+                <option value="departments">Communication</option>
+                <option value="departments">Signals</option>
+                <option value="departments">Gprs and Imei</option>
+            </optgroup>
+
+            <optgroup label="Chemical">
+                <option value="departments">Rusting</option>
+                <option value="departments">Material Science</option>
+                <option value="departments">OOps</option>
+            </optgroup>
+        </select><br>
+
+    <label for="purpose">purpose:</label>
+    <select id="purpose" name="purpose">
+    <option value="enquiry">enquiry</option>
+    <option value="place order">place order</option>
+    <option value="return">return</option>
+    </select><br>
+    <br>
+    <label for="Materials Provide">Materials Provide</label><br>
+    <input type="checkbox" id="materials" name="stationary" value="notebook">
+    <label for="materials"> notebook</label><br>
+    <input type="checkbox" id="materials" name="stationary" value="Pen">
+    <label for="materials"> Pen</label><br>
+    <input type="checkbox" id="materials" name="stationary" value="Paper">
+    <label for="materials"> paper</label><br>
+    <input type="checkbox" id="materials" name="stationary" value="diary">
+    <label for="materials"> diary</label><br>
+    <br>
+
+    <div class="d-flex justify-content-center mt-3 login_container">
+        <a class="btn btn-success" href="{% url 'submit' %}" role="button">Submit</a>
+        <a class="btn btn-primary" href="{% url 'logout' %}" role="button">Logout</a>
+    </div>
+
+
+</form>
+</body>
+</html>

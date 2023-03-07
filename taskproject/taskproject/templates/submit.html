@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="submit" method="post">
+    {% csrf_token %}
+
+<p class="card-text" style="color:black;"><h2>Order Confirmed Successfully </h2> </p>
+<a href="{% url 'logout' %}" class="btn btn-success">Click here to homepage</a>
+</body>
+</html>
